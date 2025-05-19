@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+:root {
+  --primary: #b39ddb;
+  --secondary: #5c6bc0;
+  --background: #f9f9fb;
+  --text-dark: #1c1c1c;
+  --text-muted: #666;
+  --accent: #e1bee7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body {
+  background-color: var(--background);
+  color: var(--text-dark);
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
+  background-size: 1350% 1350%;
+  animation-name: background_color_change;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes background_color_change {
   from {
-    transform: rotate(0deg);
+    background-position: 0% 50%;
   }
   to {
-    transform: rotate(360deg);
+    background-position: 100% 50%;
   }
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  border-radius: 5px;
+  margin: 0px 3px;
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: la;
+}
+
+.nav-link:active {
+  color: white;
+  background-color: blueviolet;
 }
