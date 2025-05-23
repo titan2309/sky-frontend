@@ -1,12 +1,20 @@
-:root {
-  --primary: #b39ddb;
-  --secondary: #5c6bc0;
-  --background: #f9f9fb;
-  --text-dark: #1c1c1c;
-  --text-muted: #666;
-  --accent: #e1bee7;
+[data-theme="light"] {
+  --primary: #4ea8de;
+  --secondary: #a7c7e7;
+  --background: #fefeff;
+  --text: #111827;
+  --accent: #5a9bd4;
+  --box-shadow: rgb(129, 180, 226) 0px 20px 30px -10px;
 }
 
+[data-theme="dark"] {
+  --primary: #1b263b;
+  --secondary: #203749;
+  --background: #050911;
+  --text: #a0aec0;
+  --accent: #3b82f6;
+  --box-shadow: rgba(59, 130, 246, 0.4) 0px 12px 24px -8px;
+}
 * {
   padding: 0;
   margin: 0;
@@ -14,13 +22,10 @@
 }
 
 body {
-  background-color: var(--background);
-  color: var(--text-dark);
   font-family: "Delius Swash Caps", cursive;
   font-weight: 400;
   font-style: normal;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   background-size: 1350% 1350%;
   animation-name: background_color_change;
   animation-duration: 3s;
@@ -38,12 +43,37 @@ body {
   }
 }
 
+/* NAVBAR */
+.navbar-toggler {
+  box-shadow: none !important;
+  border: none !important;
+  cursor: pointer;
+}
+
+.custom-toggler-white {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.custom-toggler-black {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 .navbar-brand {
+  background: linear-gradient(135deg, #4ea8de, #a7c7e7);
   font-size: 2rem;
+  font-weight: bold;
   font-style: italic;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-item {
+  text-align: center;
 }
 
 .nav-link {
+  color: var(--text);
   font-size: 1.1rem;
   border-radius: 5px;
   margin: 0px 3px;
@@ -51,10 +81,104 @@ body {
 
 .nav-link:hover {
   color: white;
-  background-color: la;
+  background-image: linear-gradient(150deg, var(--primary), var(--secondary));
 }
 
-.nav-link:active {
+.theme-switch .form-check-input {
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+.theme-switch .form-check-input:checked {
+  background-color: #6c63ff;
+}
+
+/* HOME - HERO */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 90vh;
+}
+
+.hero-heading {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: bolder;
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.hero-head-1,
+.hero-subhead-1 {
+  color: var(--text);
+}
+
+.hero-subheading {
+  font-size: clamp(1.1rem, 3vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.hero-btn {
+  font-size: clamp(0.8rem, 3vw, 1.2rem);
+}
+
+/* MINI FEATURE */
+.mini-feature-section {
+  background-color: var(--background);
+  padding: 40px;
+}
+
+.mini-feature-container {
+  height: auto;
+}
+
+.feature-card {
+  color: var(--text);
+  background-color: var(--background);
+  border: none;
+  margin: 10px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: scale(1.04);
+  box-shadow: var(--box-shadow);
+}
+
+/* FOOTER */
+
+.footer-container {
+  padding: 40px;
+}
+
+.footer-brand {
+  color: var(--text);
+  font-size: clamp(1.8rem, 5vw, 2.1rem);
+}
+
+.footer-subhead {
+  color: var(--text);
+}
+
+.footer-heads {
+  text-decoration: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.footer-heads:hover {
   color: white;
-  background-color: blueviolet;
+  background-image: linear-gradient(150deg, var(--primary), var(--secondary));
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  background-color: var(--background);
 }
