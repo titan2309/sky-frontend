@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="container footer-container">
+      <div className="container-fluid footer-container">
         <div>
           <div className="row">
             <div className="col-md-6 p-2">
@@ -23,10 +23,10 @@ const Footer = () => {
               </Link>
             </div>
             <div className="col-md-2 p-2">
-              <Link className="footer-heads">
+              <Link className="footer-heads" to="/faq">
                 <p>FAQ</p>
               </Link>
-              <Link className="footer-heads">
+              <Link className="footer-heads" to="/contactUs">
                 <p>Support</p>
               </Link>
             </div>
@@ -43,7 +43,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-copyright">
-            <p className="footer-subhead text-center">
+            <p className="footer-subhead text-center p-1">
               &copy; 2025 SkyScribe. All rights reserved
             </p>
           </div>

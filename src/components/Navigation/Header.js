@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { ThemeContext } from "./../context/ThemeContext.js";
 
 const Navbar = () => {
@@ -47,24 +47,24 @@ const Navbar = () => {
           <div className="d-flex justify-content-center align-items-center gap-3 ms-auto">
             <ul className="navbar-nav gap-2">
               <li className="nav-item">
-                <Link className="nav-link" to="/">
+                <NavLink className="nav-link" to="/">
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <NavLink className="nav-link" to="/about">
                   About
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/features">
+                <NavLink className="nav-link" to="/features">
                   Features
-                </Link>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/howItWorks">
+                <NavLink className="nav-link" to="/howItWorks">
                   How it works?
-                </Link>
+                </NavLink>
               </li>
               <button
                 className={`btn ${

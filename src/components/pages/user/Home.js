@@ -4,6 +4,8 @@ import { Typewriter } from "react-simple-typewriter";
 import { ThemeContext } from "../../context/ThemeContext";
 import FeatureCards from "./FeatureCards";
 import { motion } from "framer-motion";
+import Metrics from "./Metrics";
+import Newsletter from "./Newsletter";
 
 const Home = () => {
   const { theme } = useContext(ThemeContext);
@@ -71,6 +73,26 @@ const Home = () => {
           <div className="container-fluid mini-feature-container">
             <div className="row ">
               <FeatureCards />
+            </div>
+          </div>
+        </section>
+
+        {/* METRICS */}
+
+        <section className="metrics-section">
+          <div className="container text-center">
+            <div className="row d-flex justify-content-center align-items-center">
+              <Metrics />
+            </div>
+          </div>
+        </section>
+
+        {/* NEWSLETTER */}
+
+        <section className="newsletter-section">
+          <div className="container">
+            <div className="row">
+              <Newsletter />
             </div>
           </div>
         </section>

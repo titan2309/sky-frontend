@@ -8,6 +8,8 @@ import WithoutFooter from "./WithoutFooter";
 import About from "../pages/user/About";
 import Features from "../pages/user/Features";
 import HowItWorks from "../pages/user/HowItWorks";
+import ContactUs from "../pages/user/ContactUs";
+import FAQs from "../pages/user/Faq";
 
 const Routing = () => {
   return (
@@ -47,6 +49,23 @@ const Routing = () => {
             }
           />
           <Route
+            path="/contactUs"
+            element={
+              <FullLayout>
+                <ContactUs />
+              </FullLayout>
+            }
+          />
+          <Route
+            path="/faq"
+            element={
+              <FullLayout>
+                <FAQs />
+              </FullLayout>
+            }
+          />
+
+          <Route
             path="/login"
             element={
               <WithoutFooter>
@@ -57,9 +76,9 @@ const Routing = () => {
           <Route
             path="/register"
             element={
-              <FullLayout>
+              <WithoutFooter>
                 <Register />
-              </FullLayout>
+              </WithoutFooter>
             }
           />
         </Routes>
