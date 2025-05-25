@@ -45,7 +45,7 @@ const Home = () => {
               />
             </h5>
             <div className="py-1">
-              <Link to="/login">
+              <Link to="/register">
                 <button
                   className={`btn ${
                     theme === "light" ? "btn-outline-dark" : "btn-outline-light"

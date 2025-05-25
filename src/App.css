@@ -169,11 +169,11 @@ body {
   border: none;
   margin: 10px;
   transition: transform 0.4s ease-in-out;
+  box-shadow: var(--box-shadow);
 }
 
 .feature-card:hover {
-  transform: scale(1.04);
-  box-shadow: var(--box-shadow);
+  transform: scale(1.03);
 }
 
 /* METRICS */
@@ -258,10 +258,6 @@ body {
   padding: 10px;
   border: none;
   background-color: var(--background);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.about-content-card:hover {
   box-shadow: var(--box-shadow);
 }
 
@@ -307,10 +303,6 @@ body {
   padding: 20px;
   border: none;
   background-color: var(--background);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.features-card:hover {
   box-shadow: var(--box-shadow);
 }
 
